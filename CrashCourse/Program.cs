@@ -24,9 +24,39 @@ namespace CrashCourse
             Console.WriteLine("Letter: " + letter);
             Console.WriteLine("Decimal Number: " + doubleNumber);
             Console.WriteLine("Boolean: " + myBoolean);
+
+            String height = "50";
+
+            int parsedValue;
+            int.TryParse(height, out parsedValue);
+
+            if (parsedValue > 200)
+            {
+                Console.WriteLine("Yay! Tall!");
+            }
+            else
+            {
+                Console.WriteLine("Boo! Short!");
+            }
+
+
+
+            Console.WriteLine("Pick a number: 1-3: ");
+            string userInput = Console.ReadLine();
+
+            // int parsedValue;
+            int.TryParse(userInput, out parsedValue);
+            int winningNumber = 2;
+
+            if (parsedValue == winningNumber)
+            {
+                Console.WriteLine("You Won! Your number was the winning number!");
+            }
+            else
+            {
+                Console.WriteLine("Your number was not the winning number!");
+            }
             Console.Read();
-
-
         }
     }
 }
