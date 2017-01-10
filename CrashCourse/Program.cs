@@ -10,52 +10,40 @@ namespace CrashCourse
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
 
-            string name = "Danielle";
-            int number = 25;
-            char letter = 'a';
-            double doubleNumber = 5.5;
-            bool myBoolean = true;
+            // Give the user directions (1-5)
+            Console.WriteLine("Pick a number (1-5):");
 
+            // Set winning numbers
+            const int winningNumber1 = 3;
+            const int winningNumber2 = 5;
 
-            Console.WriteLine("Name: " + name);
-            Console.WriteLine("Number: " + number);
-            Console.WriteLine("Letter: " + letter);
-            Console.WriteLine("Decimal Number: " + doubleNumber);
-            Console.WriteLine("Boolean: " + myBoolean);
+            // Get data from the user
+            String userData = Console.ReadLine();
 
-            String height = "50";
-
-            int parsedValue;
-            int.TryParse(height, out parsedValue);
-
-            if (parsedValue > 200)
+            // Convert it to int
+            int userValue;
+            int.TryParse(userData, out userValue);
+            
+            // Do they match?
+            switch(userValue)
             {
-                Console.WriteLine("Yay! Tall!");
+                case winningNumber1:
+                    Console.WriteLine("You Win!");
+                    break;
+                case winningNumber2:
+                    Console.WriteLine("You kinda win!");
+                    break;
+                default:
+                    Console.WriteLine("You definitely lose.");
+                    break;
             }
-            else
-            {
-                Console.WriteLine("Boo! Short!");
-            }
 
 
 
-            Console.WriteLine("Pick a number: 1-3: ");
-            string userInput = Console.ReadLine();
 
-            // int parsedValue;
-            int.TryParse(userInput, out parsedValue);
-            int winningNumber = 2;
 
-            if (parsedValue == winningNumber)
-            {
-                Console.WriteLine("You Won! Your number was the winning number!");
-            }
-            else
-            {
-                Console.WriteLine("Your number was not the winning number!");
-            }
+
             Console.Read();
         }
     }
