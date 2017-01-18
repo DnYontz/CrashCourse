@@ -6,16 +6,21 @@ using System.Threading.Tasks;
 
 namespace CrashCourse
 {
-    class Dog
+    class Dog : Animal
     {
-        public char Gender { get; set; }
-        public int Age { get; set; }
-        public string Name { get; set; }
-        public bool isFixed { get; set; }
-        public double Weight { get; set; }
-        public string Color { get; set; }
 
-        public Dog(int Age, char Gender, string Name, bool isFixed)
+        public Dog(int Age, string Name, char Genger, bool isFixed)
+        {
+
+            this.Age = Age;
+            this.Gender = Gender;
+            this.isFixed = isFixed;
+            this.Weight = Weight;
+            this.Color = Color;
+        }
+
+
+        public Dog()
         {
             this.Name = " ";
             this.Gender = '?';
@@ -24,9 +29,9 @@ namespace CrashCourse
             this.Color = "Brown";
         }
 
-        public string MakeNoise()
+        public override string MakeNoise()
         {
-            return "Woof";
+            return "Woof!";
         }
         public string Move()
         {

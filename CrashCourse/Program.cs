@@ -11,17 +11,40 @@ namespace CrashCourse
     {
         static void Main(string[] args)
         {
-            List<Car> cars = new List<Car>();
-            cars.Add(new Car("Black"));
-            cars.Add(new Car("Red"));
-            cars.Add(new Car("Purple"));
-            cars.Add(new Car("Green"));
-            cars.Add(new Car());
+            var cat = new Cat();
+            cat.Name = "Sookie";
+            cat.Gender = 'F';
+            var noise = cat.MakeNoise();
+            Console.WriteLine(noise);
 
-            foreach (Car pieceOfCrap in cars)
+            var dog = new Dog();
+            dog.Name = "Lady";
+            dog.Gender = 'F';
+            noise = dog.MakeNoise();
+            Console.WriteLine(noise);
+
+            List<Animal> animals = new List<Animal>();
+            animals.Add(cat);
+            animals.Add(dog);
+
+            foreach (var animal in animals)
             {
-                Console.WriteLine(pieceOfCrap.Describe());
+                Console.WriteLine(animal.Name);
+
             }
+
+
+            //List<Car> cars = new List<Car>();
+            //cars.Add(new Car("Black"));
+            //cars.Add(new Car("Red"));
+            //cars.Add(new Car("Purple"));
+            //cars.Add(new Car("Green"));
+            //cars.Add(new Car());
+
+            //foreach (Car pieceOfCrap in cars)
+            //{
+            //    Console.WriteLine(pieceOfCrap.Describe());
+            //}
 
             Console.ReadKey();
         }
