@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace CrashCourse
 {
 
-    class Cat : Animal
+    class Cat : Animal, IMammal
     {
 
         public Cat(int Age, string Name, char Genger, bool isFixed) {
@@ -27,7 +27,7 @@ namespace CrashCourse
             this.Weight = Weight;
             this.Color = "Orange";
         }
-        public override string MakeNoise()
+        public string MakeNoise()
         {
             return "Meow";
         }
@@ -41,5 +41,14 @@ namespace CrashCourse
             return "Purr";
         }
 
+        public void GiveLiveBirth()
+        {
+            Console.Write("Cat had kittens");
+        }
+
+        public string GetName()
+        {
+            return this.Name;
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CrashCourse
 {
-    class Dog : Animal
+    class Dog : Animal, IMammal
     {
 
         public Dog(int Age, string Name, char Genger, bool isFixed)
@@ -29,7 +29,7 @@ namespace CrashCourse
             this.Color = "Brown";
         }
 
-        public override string MakeNoise()
+        public string MakeNoise()
         {
             return "Woof!";
         }
@@ -43,5 +43,14 @@ namespace CrashCourse
 
         }
 
+        public void GiveLiveBirth()
+        {
+            Console.Write("Dog had puppies");
+        }
+
+        public string GetName()
+        {
+            return this.Name;
+        }
     }
 }

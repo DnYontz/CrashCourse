@@ -27,12 +27,22 @@ namespace CrashCourse
             animals.Add(cat);
             animals.Add(dog);
 
+            List<IMammal> mammals = new List<IMammal>();
+            mammals.Add(cat);
+            mammals.Add(dog);
+
+
             foreach (var animal in animals)
             {
                 Console.WriteLine(animal.Name);
 
             }
 
+            foreach (var mammal in mammals)
+            {
+                mammal.GiveLiveBirth();
+                Console.Write(" and said " + mammal.MakeNoise() + Environment.NewLine);
+            }
 
             //List<Car> cars = new List<Car>();
             //cars.Add(new Car("Black"));

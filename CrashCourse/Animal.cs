@@ -17,11 +17,7 @@ namespace CrashCourse
         public string Color { get; set; }
 
 
-        public virtual string MakeNoise()
-        {
 
-            return "Random Noise";
-        }
     }
 
 
